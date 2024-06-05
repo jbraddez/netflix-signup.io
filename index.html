@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Log In</title> <!--Change to login if switched but dont change page use js - insta saved -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="website icon" type="png" href="./images/web-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img src="./images/bg.jpeg" type="jpeg" class="bg-img">
+
+    <a id="logo-cont" href="https://netflix.com/gb/"><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"></a>
+
+    <main>
+        <div class="all-card">
+            <span class="login-cont">
+                <!--LOGIN-->
+                <h1 class="text headtext">Log In</h1>
+                <hr style="position: absolute; top: 15%;">
+                <form id="login-form">
+                    <input class="log-in-put" type="text" required placeholder="Email or Phone Number">
+                    <input class="log-in-pass" type="password" required placeholder="Password" >
+                    <a href="https://netflix.com/LoginHelp" class="forgot text">Forgot Password?</a>
+                </form>
+                <h2 class="headtext or">OR</h2>
+                <br>
+                <p class="text login-google-text">Login with Google</p>
+                <a href=""><img class="login-google" src="https://1000logos.net/wp-content/uploads/2016/11/New-Google-Logo.jpg" ></a>
+                <hr>
+                <h1 class="text signup-bot">Sign Up</h1>
+            </span>
+
+            <span class="signup-cont">
+                <!--SIGNUP-->
+                <h1 class="text headtext">Sign Up</h1>
+                <hr style="position: absolute; top: 15%;">
+                <form id="signup-form">
+                    <input class="name" type="text" placeholder="Name" required>
+                    <input class="signup-put" type="text" required placeholder="Email or Phone Number">
+                    <input class="signup-pass"  minlength="7" type="password" required placeholder="Password" >
+                    <input class="signup-pass-con" minlength="7"  type="password" required placeholder="Confirm Password">
+                </form>
+                <h2 class="headtext or" style="top: 47%;">OR</h2>
+                <br>
+                <p class="text login-google-text"style="top: 55%;">Login with Google</p>
+                <a href=""><img class="login-google" style="top: 64%;" src="https://1000logos.net/wp-content/uploads/2016/11/New-Google-Logo.jpg" ></a>
+                <hr>
+                <h1 class="text login-bot">Log In</h1>
+            </span>
+
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    var signbut = document.querySelector('.signup-bot');
+    var logbut = document.querySelector('.login-bot');
+    var signcont = document.querySelector('.signup-cont');
+    var logcont = document.querySelector('.login-cont');
+    var logform = document.getElementById('login-form');
+    var signform = document.getElementById('signup-form');
+
+    // Function to update the document title
+    function updateTitle(page) {
+        document.title = 'Netflix - ' + page;
+    }
+
+    // Initialize by showing the login container and hiding the sign up container
+    logcont.classList.add('visible');
+    updateTitle('Log In');
+
+    signbut.addEventListener('click', function() {
+        logcont.classList.remove('visible');
+        logform.style.display = 'none';
+        setTimeout(function() {
+            signform.style.display = '';
+            signcont.classList.add('visible');
+            updateTitle('Sign Up');
+        }, 500); // Matches the transition duration
+    });
+
+    logbut.addEventListener('click', function() {
+        signcont.classList.remove('visible');
+        signform.style.display = 'none';
+        setTimeout(function() {
+            logform.style.display = '';
+            logcont.classList.add('visible');
+            updateTitle('Log In');
+        }, 500); // Matches the transition duration
+    });
+});
+</script>
+
+</body>
+</html>

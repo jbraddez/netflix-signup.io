@@ -1,0 +1,224 @@
+.bg-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden -moz-hidden-unscrollable;
+}
+
+body{
+    overflow: none;
+    background-color: #111810;
+}
+
+html{
+    overflow: hidden;
+}
+
+#logo-cont{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,-15%);
+}
+
+.logo{
+    width: 200px;
+    filter: drop-shadow(8px 8px 8px #000000);
+}
+
+.all-card{
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 70%;
+    top: 15%;
+    transition: 1s ease-in-out;
+}
+
+
+.text{
+    color: #E50914;
+    text-decoration: underline;
+    font-family: "Kanit", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    white-space: nowrap;
+    overflow: hidden;
+    
+}
+
+.headtext{
+    text-decoration: none;
+    font-family: "Kanit", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    color: #EEEEEE;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.signup-cont, .login-cont {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.login-form{
+    display: block;
+
+}
+
+form .log-in-put{
+    position: absolute;
+    width: 60%;
+    left: 10%;
+    top: 25%;
+    transform: translateY(-100%);
+}
+
+form input{
+    margin: 10px;
+    padding: 7px;
+    border-radius: 3px;
+    border: none;
+    background: rgba(255, 255, 255, 0.65);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.8px);
+-webkit-backdrop-filter: blur(7.8px);
+}
+
+form .log-in-pass{
+    position: absolute;
+    width: 50%;
+    left: 10%;
+    top: 35%;
+    transform: translateY(-100%);
+}
+
+form input::placeholder{
+    color: #7D7D7D;
+}
+
+form input:focus{
+    outline: none;
+
+}
+
+.forgot{
+    font-size: 13px;
+    position: absolute;
+    margin: 10px;
+    top: 40%;
+    left: 10%;
+    text-decoration: none;
+    transform: translateY(-100%);
+}
+
+.forgot:hover{
+    text-decoration: underline;
+    color: #f61a25;
+}
+
+h2.or{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40%;
+}
+
+p.login-google-text{
+    text-decoration: none;
+    font-size: 15px;
+    color: #eeeeee;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.login-google{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    opacity: 85%;
+    backdrop-filter: blur(15px);
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+hr{
+    width: 80%;
+    color: #7D7D7D;
+    border-color: #7D7D7D;
+    background-color: #7D7D7D;
+    position: absolute;
+    top: 75%;
+    left: 10%;
+}
+
+.signup-bot, .login-bot{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 400;
+    transition: 1s ease-in-out;
+}
+
+.signup-bot:hover{
+    color: #f61a25;
+    text-decoration: underline;
+    transition: 1s ease-in-out;
+}
+
+#signup-form input{
+    position: absolute;
+    left: 10%;
+    margin: 10px;
+}
+.name{
+    top: 20%;
+}
+
+.signup-put{
+    top: 30%;
+    width: 60%;
+    transform: translateY(-50%);
+}
+
+.signup-pass{
+    top: 40%;
+    transform: translateY(-100%);
+    width: 50%;
+}
+
+.signup-pass-con{
+    top: 50%;
+    transform: translateY(-150%);
+    width: 50%;
+}
+
